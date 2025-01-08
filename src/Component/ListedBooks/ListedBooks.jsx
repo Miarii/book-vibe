@@ -38,12 +38,12 @@ const ListedBooks = () => {
     const handleAddToCollection = (bookId) => {
         // Add to reading collection
         saveBookApplication(bookId);
-        
+
         // Remove from wishlist
         const wishlist = getStoredWishlist();
         const updatedWishlist = wishlist.filter(id => id !== bookId);
         localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
-        
+
         // Update display if in wishlist tab
         if (activeTab === 'wishlist') {
             setDisplayBooks(prev => prev.filter(book => book.id !== bookId));
@@ -77,7 +77,7 @@ const ListedBooks = () => {
                 <div className="flex justify-between items-center mb-6">
                     <h1 className="text-4xl font-bold text-gray-800">My Books</h1>
                     <div className="flex gap-4">
-                        <select 
+                        <select
                             className="px-4 py-2 border rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300"
                             onChange={(e) => handleSort(e.target.value)}
                         >
@@ -171,11 +171,11 @@ const ListedBooks = () => {
                                                     <span className="ml-2">{book.rating}/5.0</span>
                                                 </div>
                                             </div>
-                                            <button 
+                                            <button
                                                 onClick={() => handleAddToCollection(book.id)}
                                                 className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 shadow-md"
                                             >
-                                                Read Now?
+                                                Read Now?   
                                             </button>
                                         </div>
                                     </div>

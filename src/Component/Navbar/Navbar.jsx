@@ -40,8 +40,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <NavLink to="/signin" className="btn btn-ghost hover:bg-blue-600 hover:text-white mr-3 font-medium transition-colors">Sign In</NavLink>
-                <NavLink to="/signup" className="btn bg-blue-600 text-white hover:bg-blue-700 font-medium transition-colors">Sign Up</NavLink>
+                <NavLink to="/signIn" className="btn btn-ghost hover:bg-blue-600 hover:text-white mr-3 font-medium transition-colors">Sign In</NavLink>
+                <NavLink to="/signUp" className="btn bg-blue-600 text-white hover:bg-blue-700 font-medium transition-colors">Sign Up</NavLink>
             </div>
         </nav>
     );
